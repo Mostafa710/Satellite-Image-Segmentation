@@ -11,7 +11,7 @@ This repository contains an end-to-end machine learning project for segmenting w
 
 ## ✨ Key Features
 
-### Custom Data preprocessing
+### Custom Data Preprocessing
 The preprocessing pipeline handles 12-channel satellite images and applies data augmentation.
 
 ### Advanced Feature Engineering
@@ -53,16 +53,46 @@ cd Satellite-Image-Segmentation
 ```
 
 ### 2. Install dependencies
-Make sure you have Python 3.8+ installed, then run:
 ```
 pip install -r requirements.txt
 ```
+The dependencies include `flask`, `torch`, `torchvision`, `segmentation-models-pytorch`, `tifffile`, and `pillow`.
 
-### 3. Run the Streamlit app
+### 3. Running the application
+To start the web application, simply run the `app.py` file from your terminal:
 ```
-streamlit run app.py
+python app.py
 ```
+The application will start, and you can access it by navigating to `http://127.0.0.1:5000` in your web browser. You will be able to upload a satellite image (`.tif` or `.tiff`), and the application will display the segmented water mask.
 
 ---
+
+## 🖼️ Example
+
+Upload a satellite image through the app interface and get:
+- The original image (visualized as an RGB composite)
+- A predicted water segmentation mask
+<img width="1093" height="379" alt="Screenshot 2025-08-19 165525" src="https://github.com/user-attachments/assets/f9eda0b7-3422-4a7e-8072-810b7f538f78" />
+
+---
+
+## 💻 Tech Stack
+
+- **Languages:** Python, HTML, CSS, JavaScript
+- **Machine Learning:** TensorFlow, PyTorch, `segmentation-models-pytorch`, `torchvision`
+- **Data Handling:** NumPy, Pillow, `tifffile`
+- **Web Framework:** Flask
+
+---
+
+## 📬 Contact
+
+For questions or collaboration, feel free to connect:
+
+[LinkedIn](https://www.linkedin.com/in/mostafa-mamdouh-80b110228) | [Email](mailto:mostafamamdouh710@gmail.com)
+
+---
+
+
 
 

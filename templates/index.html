@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Satellite Water Segmentation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Water Segmentation from Satellite Image</h1>
+        <form method="POST" enctype="multipart/form-data">
+            <label class="upload-label">
+                Choose a .tif Satellite Image
+                <input type="file" name="image" id="fileInput" accept=".tif,.tiff" required>
+            </label>
+            <p id="fileName"></p>
+            <input type="submit" value="Segment Water" class="submit-btn">
+        </form>
+
+        {% if input_image and result_image %}
+            <div class="image-row">
+                <div class="image-block">
+                    <h2>Input Image</h2>
+                    <img src="{{ url_for('static', filename=input_image) }}" alt="Input" width="256">
+                </div>
+                <div class="image-block">
+                    <h2>Predicted Water Mask</h2>
+                    <img src="{{ url_for('static', filename=result_image) }}" alt="Mask" width="256">
+                </div>
+            </div>
+        {% endif %}
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
